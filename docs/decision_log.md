@@ -1,0 +1,9 @@
+# DECISION LOG — ĐỒ ÁN 17 (HOTEL BOOKING)
+
+| STT | Tên quyết định | Cách xử lý | Lý do kỹ thuật / Nghiệp vụ | Ảnh hưởng con số |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Lượt đặt 0 người | Xóa dòng | Lỗi nhập liệu, khách sạn không thể có đơn 0 khách. | Xóa 180 dòng |
+| 2 | Biến ADR bất thường | Xóa `adr < 0` & `adr >= 5000` | ADR < 0 là lỗi hệ thống; ADR = 5400 làm méo phân phối. | Xóa 2 dòng |
+| 3 | Ô trống `agent`/`company` | Điền `0` | Không qua đại lý/công ty đại diện. | Giữ nguyên 100% dòng |
+| 4 | Rò rỉ nhãn | Loại bỏ `reservation_status` & `reservation_status_date` | Dữ liệu chỉ xuất hiện sau khi giao dịch hoàn tất. | Giảm từ 32 xuống 30 cột |
+| 5 | Dòng trùng lặp | Giữ lại trong dữ liệu gốc | Khách đặt nhiều phòng cùng đợt qua đại lý là bình thường. | Giữ 31,994 dòng trùng |
