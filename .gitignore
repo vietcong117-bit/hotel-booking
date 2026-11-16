@@ -1,8 +1,8 @@
+.venv/
 venv/
 __pycache__/
-*.pyc
+*.ipynb_checkpoints/
+data/raw
+*.csv
 .env
-vscode/
-*.log
-superset/superset-frontend/node_modules
-superset/superset-frontend/node_modules_cache/
+*.secret
